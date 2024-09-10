@@ -13,8 +13,18 @@ int main(){
 //Chewbaсca and Number
 
 	int x;
-	cin>>n;
-	cout<<n<<endl;
+	cin>>x;
+    int ans=0;
+    int pow =0;
+    while(x>0){
+        int digit = x%10;
+        digit = min(digit,9-digit);
+        x = x/10;
+        ans = ans + digit*(10^pow);
+        pow++;
+    }
+    cout<<ans;
+
 
 
 
